@@ -1,0 +1,34 @@
+[
+    {
+        "pk":1,
+        "model":"products.category",
+        "fields":{
+           "name":"00s +",
+           "friendly_name":"00s +"
+        }
+    },
+    {
+       "pk":2,
+       "model":"products.category",
+       "fields":{
+          "name":"90s",
+          "friendly_name":"90s"
+       }
+    },
+    {
+        "pk":3,
+        "model":"products.category",
+        "fields":{
+           "name":"80s",
+           "friendly_name":"80s"
+        }
+     },
+     {
+        "pk":4,
+        "model":"products.category",
+        "fields":{
+           "name":"70s",
+           "friendly_name":"9=70s"
+        }
+     }
+]
