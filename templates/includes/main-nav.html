@@ -17,7 +17,7 @@
                 Events
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Euro 2020</a>
+                <a href="{% url 'products' %}?category=euro2020" class="dropdown-item">Euro 2020</a>
             </div>
         </li>
 
@@ -26,10 +26,10 @@
                 Eras
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">70s</a>
-                <a href="" class="dropdown-item">80s</a>
-                <a href="" class="dropdown-item">90s</a>
-                <a href="" class="dropdown-item">00s +</a>
+                <a href="{% url 'products' %}?category=70s" class="dropdown-item">70s</a>
+                <a href="{% url 'products' %}?category=80s" class="dropdown-item">80s</a>
+                <a href="{% url 'products' %}?category=90s" class="dropdown-item">90s</a>
+                <a href="{% url 'products' %}?category=00s" class="dropdown-item">00s+</a>
             </div>
         </li>
 
@@ -38,10 +38,10 @@
                 Teams
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Barcelona</a>
-                <a href="" class="dropdown-item">Real Madrid</a>
-                <a href="" class="dropdown-item">Liverpool</a>
-                <a href="" class="dropdown-item">Juventus</a>
+                <a href="{% url 'products' %}?category=barcelona" class="dropdown-item">Barcelona</a>
+                <a href="{% url 'products' %}?category=real_madrid" class="dropdown-item">Real Madrid</a>
+                <a href="{% url 'products' %}?category=liverpool" class="dropdown-item">Liverpool</a>
+                <a href="{% url 'products' %}?category=juventus" class="dropdown-item">Juventus</a>
             </div>
         </li>
     </ul>
