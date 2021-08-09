@@ -69,18 +69,18 @@ body{
     border: 1px solid black !important;
 }
 
-.bg-black{
+.bg-black {
     background: #000 !important;
 }
 
 .overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 a.category-badge > span.badge:hover {
@@ -96,20 +96,23 @@ a.category-badge > span.badge:hover {
     right: 10px;
 }
 
-.btt-link, .update-link, .remove-item {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/* ------------------------------- bootstrap toasts */
 
 .message-container {
     position: fixed;
     top: 72px;
     right: 15px;
     z-index: 99999999999;
-}
-
-input[name='q']::placeholder {
-    color: #aab7c4;
-
 }
 
 .custom-toast {
@@ -171,11 +174,6 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-.bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -185,7 +183,7 @@ input[name='q']::placeholder {
   }
 }
 
-/* Allauth form formatting*/
+/* Allauth form formatting */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
@@ -267,6 +265,7 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -291,3 +290,40 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
+
+    .display-4.logo-font.text-black {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
+    }
+}
