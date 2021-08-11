@@ -10,6 +10,10 @@ body{
     font-family: 'Lato';
 }
 
+.product-title{
+    padding-top: 5px;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
