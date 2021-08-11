@@ -2,7 +2,7 @@ html{
     height: 100%;
 }
 
-.backg{
+.body{
     background: linear-gradient(180deg, rgba(37, 21, 20, 0.3) 99.99%, rgba(255, 255, 255, 0) 100%), url('/media/Main.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
