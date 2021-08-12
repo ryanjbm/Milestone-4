@@ -25,6 +25,13 @@ body{
 	animation-fill-mode: forwards;
 }
 
+#cover {
+	position: absolute;
+	text-align: center;
+	top: 35%;
+	width: 100%;
+}
+
 @keyframes hero-zoom {
 	from {
 		transform: scale(1);
