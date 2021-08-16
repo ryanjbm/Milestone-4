@@ -3,12 +3,40 @@ html{
 }
 
 body{
-    background: linear-gradient(180deg, rgba(37, 21, 20, 0.3) 99.99%, rgba(255, 255, 255, 0) 100%), url('/media/Main.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
 }
+
+.fade-in {
+	opacity: 0;
+	transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+	opacity: 1;
+}
+
+#hero-section {
+	overflow: hidden;
+}
+
+#hero {
+	width: 100%;
+	height: 600px;
+	background: linear-gradient(180deg, rgba(37, 21, 20, 0.3) 99.99%, rgba(255, 255, 255, 0) 100%), url('/media/Main.jpg') no-repeat center center fixed;
+}
+
+
+/*-Madrid Text-*/
+
+#hero-title {
+	font-family: "Permanent Marker", sans-serif;
+	font-size: 6rem;
+	transform: rotate(-10deg);
+}
+
+
+
 
 
 .product-title{
