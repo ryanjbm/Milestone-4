@@ -23,6 +23,11 @@ body{
     margin-top: 200px;
 }
 
+footer{
+    background-color: black;
+    color: black;
+}
+
 .product-title{
     margin-top: 10px;
 }
