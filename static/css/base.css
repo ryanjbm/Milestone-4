@@ -18,13 +18,16 @@ body{
 .home-pad{
     margin-top: 50px;
 }
+.home-pad-foot{
+    margin-bottom: 100px;
+}
 
 .home-pad-store{
     margin-top: 200px;
 }
 
 footer{
-    height: 200px;
+    height: 250px;
     background-color: black;
     color: white;
 }
