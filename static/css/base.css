@@ -10,6 +10,11 @@ body{
     font-family: 'Lato';
 }
 
+#section-background{
+    background: white;
+    background-color: white;
+}
+
 
 .product-title{
     margin-top: 10px;
