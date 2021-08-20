@@ -53,4 +53,25 @@ All images were copyright free found using google images uploaded from other onl
 
 # Features
 
+### Navbar
+
+<img src="media/navbar.png">
+
+* The navigation bar appears on every page, it includes the company logo and name in the top left corner, also acting as a link back to the home page. Navigation links go across the middle of the navigation bar with one drop down allowing easy categorising of products
+* On smaller resolutions the navbar collapses and the links go to a collapsible menu on the top left, the company logo dissapears to then allow quick access to the search bar, account and bag buttons
+* When logged in users are unable to click the register button on the navbar
+* When logged in as a superuser, you are given an extra option under account for product management
+
+### Footer
+* The footer features copyright information along with a shortcut button to register on the site
+
+### Individual Pages
+
+### Home
+
+* Hero image with a dark gradient over the top so text is more visible
+* A "Shop Now" button allowing quick access to viewing all the products
+* Text about who and what Retro F.C. is and does
+* Advertising of the Retro F.C. store featuring a button which opens up google maps in a new page with the coordinates for the store
+* Image of the inside of the store
 
