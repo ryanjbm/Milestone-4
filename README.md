@@ -39,7 +39,7 @@ Colour scheme was kept minimalistic to match the tone of the site, colours used 
 * Black (#000000)
 * White (#FFFFFF)
 
-** Typography
+** Typography **
 2 [Google Fonts](https://fonts.google.com/) were used across the site:
 * Poppins
 * Roboto Slab
