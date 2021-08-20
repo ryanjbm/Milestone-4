@@ -55,7 +55,7 @@ All images were copyright free found using google images uploaded from other onl
 
 ### Navbar
 
-<img src="media/navbar.png">
+<img src="media/Navbar.png">
 
 * The navigation bar appears on every page, it includes the company logo and name in the top left corner, also acting as a link back to the home page. Navigation links go across the middle of the navigation bar with one drop down allowing easy categorising of products
 * On smaller resolutions the navbar collapses and the links go to a collapsible menu on the top left, the company logo dissapears to then allow quick access to the search bar, account and bag buttons
