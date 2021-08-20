@@ -9,4 +9,14 @@ Retro F.C. is an e-commerce website created for the purpose of allowing people t
 ### User Stories
 | User Type | Users Wants |
 | --------- | ----------- |
-| Casual User | Purchase Retro Top |
+| Casual User | Navigate through the site and pages easily |
+| Casual User | View the site across all devices |
+| Casual User | View information as to where the in person store is |
+| Casual User | Browse through football kits available |
+| Casual User | Search and categorise football kits |
+| Casual User | View a description of the kits |
+| Casual User | Process of purchasing a kit, adding to bag along with a succesfull checkout |
+| Registered User | View previous orders made |
+| Registered User | Save address information for future use |
+| Admin / Superuser | Add new products |
+| Admin / Superuser | Update / Delete products |
