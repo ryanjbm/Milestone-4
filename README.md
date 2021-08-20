@@ -26,6 +26,7 @@ Retro F.C. is an e-commerce website created for the purpose of allowing people t
 # UX
 
 **Wireframes**
+
 When creating the initial design for the site, I used Figma to layout all the pages.
 
 Various alterations were made throughout the process including footer changes, slight layout differences and colours used.
@@ -40,8 +41,16 @@ Colour scheme was kept minimalistic to match the tone of the site, colours used 
 * White (#FFFFFF)
 
 **Typography**
+
 2 [Google Fonts](https://fonts.google.com/) were used across the site:
 * Poppins
 * Roboto Slab
+
+**Media**
+
+All images were copyright free found using google images uploaded from other online stores. Logo created by myself on Canva.
+
+
+# Features
 
 
