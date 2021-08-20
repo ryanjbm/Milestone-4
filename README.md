@@ -129,101 +129,118 @@ The structure of the Product and Checkout apps are guided by the Code Institute'
 # Deployment
 **Local Deployment**
 
-This repository may be cloned directly into an editor by pasting the following command into the terminal:
-'''
+1. This repository may be cloned directly into an editor by pasting the following command into the terminal:
+```
 git clone https://github.com/ryanjbm/retro-fc
-'''
+```
 
 Alternatively, you can save a copy of this repository by clicking the green button "Clone or download" , then "Download Zip" button, and after extract the Zip file to your folder.
 
-In the terminal window change directory (CD) to the correct file location (directory that you have just created).
+1. In the terminal window change directory (CD) to the correct file location (directory that you have just created).
 
-Install all requirements from the requirements.txt file putting this command into your terminal:
-
+1. Install all requirements from the requirements.txt file putting this command into your terminal:
+```
 pip3 install -r requirements.txt
+```
 Note: GitPod does not require sudo, so if you use another IDE, you will need to include sudo in the beginning of the command: sudo pip3 install -r requirements.txt.
 
-Set up the following environment variables to use the full functionality of the site.
+1. Set up the following environment variables to use the full functionality of the site.
 
-DANGO_SECRET_KEY = your secret key.
+* DANGO_SECRET_KEY = your secret key.
 
-STRIPE_PUBLIC_KEY = your stripe public key.
+* STRIPE_PUBLIC_KEY = your stripe public key.
 
-STRIPE_SECRET_KEY = your stripe secret key.
+* STRIPE_SECRET_KEY = your stripe secret key.
 
-STRIPE_WEBHOOK_SECRET = your stripe webhook secret.
+* STRIPE_WEBHOOK_SECRET = your stripe webhook secret.
 
-IN_DEVELOPMENT = True
+* IN_DEVELOPMENT = True
 
-Your stripe variables can be found on your stripe dashboard.
+* Your stripe variables can be found on your stripe dashboard.
 
-You can generate a Django secret key here. Django Secret Key Generator
+* You can generate a Django secret key here. Django Secret Key Generator
 
-Then migrate:
-
+1. Then migrate:
+```
 $ python manage.py migrate
-Populate the products, cats, contact, home, help apps with relavant fixtures:
-
+```
+1. Populate the products, cats, contact, home, help apps with relavant fixtures:
+```
 $ python manage.py loaddata fixtures/<filename>.json
-Create a superuser:
-
+```
+1. Create a superuser:
+```
 $ python manage.py createsuperuser
-You will now be able to run the application using the following command
-
+```
+1. You will now be able to run the application using the following command
+```
 $ python3 manage.py runserver
-Deployment to Heroku
+```
+**Deployment to Heroku**
 
 The app may be deployed to Heroku using the following ste:
 
-Create an app on the Heroku website.
+**Create an app on the Heroku website.**
 
-Click on the new button.
-Click on the create a new app.
-Give the app a name and chose current region.
-Select create app.
-Set up Postgres Database
+* Click on the new button.
+* Click on the create a new app.
+* Give the app a name and chose current region.
+* Select create app.
 
-Heroku
+**Set up Postgres Database**
 
-In the app resources search for Postgres
-Add to the project and, choosing the free plan.
-To use Postgres install 2 dependencies.
-dj_database_url
-psycopg2
-In Project.
+* Heroku
 
-Install the two packages needed
+* In the app resources search for Postgres
+* Add to the project and, choosing the free plan.
+* To use Postgres install 2 dependencies.
+* dj_database_url
+* psycopg2
 
+
+**In Project.**
+
+* Install the two packages needed
+```
     pip3 install dj_database_url
+```
+```
     pip3 install psycopg2_binary
-Add them to the requirements.txt file
-
+```
+* Add them to the requirements.txt file
+```
 pip3 freeze > requirements.txt
-In settings.py import dj_database_url
-
+```
+* In settings.py import dj_database_url
+```
 import dj_database_url
-Comment out the current database settings.
+```
+* Comment out the current database settings.
 
-Replace them with the settings for the Postgres database.
-
+* Replace them with the settings for the Postgres database.
+```
     DATABASES = {
         'default': dj_database_url.parse('DATABASE_URL')
     }
-Get database URL from app config settings. (I haven't shown it above as its and environmental variable and shouldn't be shown in version control)
+```
+* Get database URL from app config settings. (I haven't shown it above as its and environmental variable and shouldn't be shown in version control)
 
-Then migrate:
-
+* Then migrate:
+```
 $ python manage.py migrate
-Populate the products, cats, contact, home, help apps with relavant fixtures:
-
+```
+* Populate the products, cats, contact, home, help apps with relavant fixtures:
+```
 $ python manage.py loaddata fixtures/<filename>.json
-Create a superuser:
-
+```
+* Create a superuser:
+```
 $ python manage.py createsuperuser
-Commit changes making sure to remove my database URL beforehand so it isn't saved in version control.
+```
+* Commit changes making sure to remove my database URL beforehand so it isn't saved in version control.
 
-Create an if-else statement in the settings.py to use Postgres if the DATABASE_URL variable is available and if not use the default database
-
+* Create an if-else statement in the settings.py to use Postgres if the DATABASE_URL variable is available and if not use the default database
+```
     if "DATABASE_URL" in os.environ:
         DATABASES = {
             "default": dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -235,71 +252,83 @@ Create an if-else statement in the settings.py to use Postgres if the DATABASE_U
                 'NAME': BASE_DIR / 'db.sqlite3',
             }
         }
-The Postgres database is now ready for use.
+```
+* The Postgres database is now ready for use.
 
 Gunicorn
 
-For the app to work install Greenunicorn.
-To install:
+* For the app to work install Greenunicorn.
+* To install:
+```
 pip3 install Gunicorn
-Create a Procfile to let Heroku know how to run the app:
+```
+* Create a Procfile to let Heroku know how to run the app:
+```
     touch Procfile
-Then in Procfile place the following code:
+```
+* Then in Procfile place the following code:
+```
     web: gunicorn <app name>.wsgi:application
-Heroku in the command line.
+```
+**Heroku in the command line.**
 
-Log into Heroku using the terminal.
-
+* Log into Heroku using the terminal.
+```
     heroku login -i
-Temporarily disable the static files until they have been set up on Amazon Aws.
-
+```
+* Temporarily disable the static files until they have been set up on Amazon Aws.
+```
     heroku config:set DISABLE_COLLECTSTATIC=1 --app <app name>
-Use the --app command if you have more than one Heroku app.
-Then in settings I added Heroku into allowed hosts, and localhost so my project can still be run locally.
-
+```
+* Use the --app command if you have more than one Heroku app.
+* Then in settings I added Heroku into allowed hosts, and localhost so my project can still be run locally.
+```
     ALLOWED_HOSTS = ["<heroku app name>.herokuapp.com", "localhost"]
-Commit changes to Github.
+```
+* Commit changes to Github.
 
-Then set up pushing to Heroku
-
+* Then set up pushing to Heroku
+```
     heroku git:remote -a <heroku app name>
-Then push the project to Heroku
-
+```
+* Then push the project to Heroku
+```
     git push heroku master
-Heroku will now build your app.
+```
+* Heroku will now build your app.
 
-Heroku Website
+**Heroku Website**
 
-Connect app to GitHub by opening the Deploy section.
-Searched for the repository.
-Connect and then enabled Automatic Deploys.
-This now means that any changes pushed to GitHub will be automatically pushed to Heroku as well.
-Amazon AWS
+* Connect app to GitHub by opening the Deploy section.
+* Searched for the repository.
+* Connect and then enabled Automatic Deploys.
+* This now means that any changes pushed to GitHub will be automatically pushed to Heroku as well.
 
-Amazon AWS was used to store both static files and media files.
+## Amazon AWS
 
-Firstly create an AWS account and work through the sign-up process. Once account is set up set the project up on AWS.
+* Amazon AWS was used to store both static files and media files.
 
-Create a bucket.
+* Firstly create an AWS account and work through the sign-up process. Once account is set up set the project up on AWS.
 
-Create the bucket
+* Create a bucket.
 
-Create a new bucket on the AWS S3 service.
-From the main dashboard search for S3 and then click to get started.
-Click on the Create bucket button.
-Give the bucket a name and select region.
-Then uncheck the block public access and acknowledge that the bucket will now be public.
-Then click create bucket.
-Bucket settings.
+* Create a new bucket on the AWS S3 service.
+* From the main dashboard search for S3 and then click to get started.
+* Click on the Create bucket button.
+* Give the bucket a name and select region.
+* Then uncheck the block public access and acknowledge that the bucket will now be public.
+* Then click create bucket.
+* Bucket settings.
+* Properties
+* Navigate to the bucket properties settings.
+* Turn on static website hosting.
+* In the index and error add index.html and error.html.
+* Click Save.
+* Permissions
+* Click on the buckets Permissions tabs.
+* Firstly paste in the following cors config.
 
-Properties
-Navigate to the bucket properties settings.
-Turn on static website hosting.
-In the index and error add index.html and error.html.
-Click Save.
-Permissions
-Click on the buckets Permissions tabs.
-Firstly paste in the following cors config.
+```
 [
     {
         "AllowedHeaders": [
@@ -314,44 +343,45 @@ Firstly paste in the following cors config.
         "ExposeHeaders": []
     }
     ]
-Then in the bucket policy tap, click on generate policy.
-Policy
-Select S3 bucket policy
-Add * to the principal field to select all principals
-Set the action to get object.
-Paste in your ARN which is available on the previous page.
-Click, add statement
-Then click, generate policy.
-Now copy and paste your new policy into the bucket policy.
-Add /* onto the end of the resources key
-Click Save.
-Access control list
-In the access control list tab set the list objects permission to everyone.
-Create a User.
+```
+* Then in the bucket policy tap, click on generate policy.
+* Policy
+* Select S3 bucket policy
+* Add * to the principal field to select all principals
+* Set the action to get object.
+* Paste in your ARN which is available on the previous page.
+* Click, add statement
+* Then click, generate policy.
+* Now copy and paste your new policy into the bucket policy.
+* Add /* onto the end of the resources key
+* Click Save.
+* Access control list
+* In the access control list tab set the list objects permission to everyone.
+* Create a User.
 
-To create a user for the bucket search for IAM and select it.
+* To create a user for the bucket search for IAM and select it.
 
-Create a Group.
+* Create a Group.
 
-Firstly create a group to put user in.
-Click create a new group and name it.
-Click through to the end and save the group.
-Create a policy.
-In the group click, policy and then, create policy.
-Select the JSON tab and then import managed policies.
-Search S3 and select AmazonS3FullAccess and import.
-In the resources section paste in the arn from before.
-click through to review the policy.
-Fill in name and description and then click generate policy.
-Back in your group click permission and then attach the policy.
-Find the policy you've just created and attach it.
-Create the User.
+* Firstly create a group to put user in.
+* Click create a new group and name it.
+* Click through to the end and save the group.
+* Create a policy.
+* In the group click, policy and then, create policy.
+* Select the JSON tab and then import managed policies.
+* Search S3 and select AmazonS3FullAccess and import.
+* In the resources section paste in the arn from before.
+* click through to review the policy.
+* Fill in name and description and then click generate policy.
+* Back in your group click permission and then attach the policy.
+* Find the policy you've just created and attach it.
+* Create the User.
 
-Select Users from the sidebar and then click, add user.
-Create a user name and select programmatic access then click next.
-Then select the group to add user to.
-Click through to the end and then click create user.
-** Make sure to now download the CSV file as it contains the users keys needed to access from our app.**
+* Select Users from the sidebar and then click, add user.
+* Create a user name and select programmatic access then click next.
+* Then select the group to add user to.
+* Click through to the end and then click create user.
+* ** Make sure to now download the CSV file as it contains the users keys needed to access from our app.**
 
 
 
