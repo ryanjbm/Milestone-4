@@ -125,6 +125,11 @@ Using Django Allauth and it's default django.contrib.auth.models, provided me wi
 
 The structure of the Product and Checkout apps are guided by the Code Institute's walkthrough project, Boutique Ado.
 
+### Code Validation
+
+* CSS was validated using W3C CSS Validation Service - Jigsaw
+* HTML was validated using W3C Markup Validation Service.
+* Python code was validated using PEP8 online checker.
 
 # Deployment
 **Local Deployment**
