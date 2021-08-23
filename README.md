@@ -131,6 +131,37 @@ The structure of the Product and Checkout apps are guided by the Code Institute'
 * HTML was validated using W3C Markup Validation Service.
 * Python code was validated using PEP8 online checker.
 
+# Testing
+
+ - During development of the project I carried out testing using Google Chrome Developer Tools to check changes
+ - I have tested across different mobile devices and screen sizes
+ 
+ ### Main Functionality Tests
+ 
+|  Test	|	Image  | Result |
+|--|--|--|
+| User Register | <img src="media/Test1.png"> |	Passed |
+| User Login | <img src="media/test2.png"> |	Passed |
+| Place Order | <img src="media/test3.png"> |	Passed |
+| Email Confirmation| <img src="media/test4.png"> |	Passed |
+| View Past Orders| <img src="media/test5.png"> |	Passed |
+| Email Confirmation| <img src="media/test6.png"> |	Passed |
+
+### Other Tests
+
+| Test | Result |
+|--|--|
+| Mobile Device | Passed |
+| Tablet Device | Passed |
+| Computer | Passed |
+| Firefox| Passed |
+| Safari| Passed |
+| Chrome| Passed |
+|Logout | Passed |
+|Search Bar | Passed |
+|Navbar Categories | Passed |
+
+
 # Deployment
 **Local Deployment**
 
