@@ -422,9 +422,11 @@ pip3 install Gunicorn
 ### Credits
 
 **Acknowledgments**
+
 Big thank you to my mentor Brian Macharia, the guidance he has given me throughout has provided me with great knowledge and results that couldn't have been achieved alone.
 
 **Disclaimer**
-This project was made for educational purposes only
+
+This project was made for educational purposes only.
 
 
